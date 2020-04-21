@@ -1,0 +1,118 @@
+body{
+  background: linear-gradient(#FF8690, #FEC180);
+  margin-bottom: 329px;
+}
+
+.choco-title{
+  position: relative;
+  text-align: center;
+}
+
+.bubble{
+  display: flex;
+  justify-content: center;
+  font-family: 'Fredoka One', cursive;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  position: absolute;
+  top: 74px;
+  left: 580px;
+  color: #ffffff;
+  font-size: 75px;
+  text-transform: uppercase;
+  text-shadow: -4px 0 #000000, 0 4px #000000,
+      4px 0 #000000, 0 -4px #000000;
+}
+
+.defender{
+  display: flex;
+  justify-content: center;
+  font-family: 'Fredoka One', cursive;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  position: absolute;
+  top: 223px;
+  left: 510px;
+  color: #ffffff;
+  font-size: 70px;
+  text-transform: uppercase;
+  text-shadow: -4px 0 #000000, 0 4px #000000,
+      4px 0 #000000, 0 -4px #000000;
+}
+
+.chocolat{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  transform: rotate(270deg);
+  width: 300px;
+  height: 450px;
+}
+
+.button{
+  display: block;
+  width: 150px;
+  height: 50px;
+  color: #ff3a5a;
+  font size: 20px;
+  margin: 0 auto;
+  line-height: 50px;
+  text-align: center;
+  border-radius: 3px;
+  text-decoration: none;
+  font-family: 'Avenir next', sans-serif;
+  font-weight:bold;
+  font-size: 50px;
+  letter-spacing:2px;
+  text-shadow: 2px 2px #333333;
+}
+
+.button:hover{
+  color: #FFFFFF;
+}
+
+.bonbon{
+  position: absolute;
+  top: 75px;
+  left: 50px;
+  width: 150px;
+  height: 150px;
+}
+
+.biscuit{
+  position: absolute;
+  top: 550px;
+  left: 150px;
+  width: 150px;
+  height: 150px;
+}
+
+.muffinA{
+  position: absolute;
+  top: 160px;
+  left: 1100px;
+  width: 150px;
+  height: 150px;
+  transform: rotate(345deg);
+}
+
+.sucette{
+  position: absolute;
+  top: 450px;
+  left: 1200px;
+  width: 150px;
+  height: 250px;
+  transform: rotate(45deg);
+}
+
+.donnut{
+  position: absolute;
+  top: 600px;
+  left: 850px;
+  width: 150px;
+  height: 150px;
+}
+
+
