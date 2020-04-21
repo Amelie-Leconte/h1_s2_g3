@@ -109,10 +109,24 @@ body{
 
 .donnut{
   position: absolute;
-  top: 600px;
+  top: 575px;
   left: 850px;
   width: 150px;
   height: 150px;
 }
 
+.home_bubble{
+  position: absolute;
+  top: 280px;
+  left: 260px;
+  width: 110px;
+  height: 110px;
+}
 
+.cloud{
+  position: absolute;
+  top: 649px;
+  left: -10px;
+  width: 1442px;
+  height: 180px;
+}
