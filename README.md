@@ -1,2 +1,6 @@
-# test_equipe_3
-asmaa
+#CONTRIBUTORS
+Asmaa ABOUDI
+Hugo BARBIER
+Ikram Chelil
+Hugo Ferrer
+Amelie Leconte
