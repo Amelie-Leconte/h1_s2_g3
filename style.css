@@ -130,6 +130,49 @@ body{
   height: 180px;
 }
 
+/*  Pop up rules  */
+
+p {
+  margin: 10px;
+  padding: 10px 10px 10px 10px;
+}
+
+.modal {
+  height: 375px;
+  width: 31%;
+  background-color: #f8a5c2;
+  font-family: 'Fredoka One', cursive;
+  font-size: 20px;
+  border-radius: 10px 10px;
+  text-align: center;
+  color: #dd6979;
+  position: absolute;
+  top: -400px;
+  left: 35%;
+  transition: 1s;
+}
+
+.modal p {
+  padding-top: 30px;
+}
+
+.close {
+  height: 50px;
+  width: 250px;
+  background-color: #dd6979;
+  color: #ffeefd;
+  font-family: 'Fredoka One', cursive;
+  font-size: 25px;
+  border: none;
+  cursor: pointer;
+  border-radius: 20px 20px;
+}
+
+.popup {
+  width: 100%;
+  border-radius: 0px 0px 20px 20px;
+}
+
 /*  Game HTML */
 .game_container{
   display: flex;

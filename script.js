@@ -7,6 +7,7 @@ let enemy
 let imageEnemy
 const container = document.querySelector(".game_container")
 let gravitySpeed = 30
+const modal = document.querySelector(".modal")
 
 //OBJECT//
 const biscuit = {
@@ -91,6 +92,17 @@ height : 110,
 width : 110,
 weight : 50,
 }
+
+//Pop up rules//
+
+function openModal() {
+    modal.style.top = "0px"
+}
+
+function closeModal() {
+    modal.style.top = "-400px"
+}
+
 //CREAT-ENEMIES//
 
 
