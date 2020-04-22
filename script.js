@@ -148,3 +148,27 @@ enemiesOnScreen.splice(index,1)
 },gravitySpeed)
 }
 gravity()
+///////////// SOUND /////////////
+
+
+function play(idPlayer, control) {
+    let player = document.querySelector('#' + idPlayer);
+
+    if (player.paused) {
+        player.play();
+        control.textContent = 'I I';
+    } else {
+        player.pause();
+        control.textContent = '♪';
+    }
+}
+
+
+function resume(idPlayer) {
+    let player = document.querySelector('#' + idPlayer);
+
+    player.currentTime = 0;
+    player.pause();
+}
+
+ 
