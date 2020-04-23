@@ -1,3 +1,14 @@
+/* CSS files add styling rules to your content */
+
+body {
+  font-family: helvetica, arial, sans-serif;
+  margin: 2em;
+}
+
+h1 {
+  font-style: italic;
+  color: #373fff;
+}
 html, body{
   margin: 0;
   padding: 0;
@@ -100,8 +111,8 @@ body{
 
 .muffinA{
   position: absolute;
-  top: 130px;
-  left: 1100px;
+  top: 155px;
+  left: 1050px;
   width: 150px;
   height: 150px;
   transform: rotate(345deg);
@@ -128,9 +139,126 @@ body{
   position: absolute;
   top: 610px;
   left: 0px;
-  width: 1442px;
-  height: 180px;
+  width: 1440px;
+  height: 179px;
 }
+
+
+/******************* BUTTON ************/
+
+
+.pause{
+    position: absolute;
+    top: 30px;
+    left: 1200px;
+    border-radius: 20px;
+    background: #fec180;
+    box-shadow:  0px 0px 0px #ffffff,
+                 0px 0px0px #591e00;
+    text-decoration: none;
+    color: #8B4513;
+    padding: 15px 15px;
+    border: 3px solid #8B4513;
+    font-size: 25px;
+}
+
+.pause_button.is_paused{
+    box-shadow: inset 0px 0px 0px #ffffff,
+                inset -10px -10px 10px #591e00;
+    visibility: hidden;
+}
+
+.music_on{
+    position: absolute;
+    top: 30px;
+    left: 1300px;
+    border-radius: 20px;
+    background: #fec180;
+    box-shadow:  0px 0px 0px #ffffff,
+                 0px 0px0px #591e00;
+    text-decoration: none;
+    color: #8B4513;
+    padding: 15px 22px;
+    border: 3px solid #8B4513;
+    font-size: 25px;
+}
+
+.music_off{
+    position: absolute;
+    top: 30px;
+    left: 1300px;
+    border-radius: 20px;
+    background: #fec180;
+    box-shadow: inset 0px 0px 0px #ffffff,
+                inset -10px -10px 10px #591e00;
+    text-decoration: none;
+    color: #8B4513;
+    padding: 15px 22px;
+    border: 3px solid #8B4513;
+    font-size: 25px;
+    visibility: hidden;
+}
+
+.control
+{
+  background-color: #FFB6C1;
+  border: none;
+  color: #ffffff;
+  padding: 14px 18px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 25px;
+  margin: 4px 2px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+  border-radius:15px;
+  position: absolute;
+  top: 30px;
+  left: 1325px;
+}
+
+.pause_button{
+  background-color: #FFB6C1;
+  border: none;
+  color: #ffffff;
+  padding: 16px 21px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 25px;
+  margin: 4px 2px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+  border-radius:15px;
+  position: absolute;
+  top: 30px;
+  left: 1250px;
+}
+
+.return_to_menu{
+  background-color: #FFB6C1;
+  border: none;
+  color: #ffffff;
+  padding: 10px 21px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 35px;
+  margin: 4px 2px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+  border-radius:15px;
+  position: absolute;
+  top: 30px;
+  left: 1175px;
+}
+
+button:hover {
+  background-color: #fec5d9;
+  color: #ffffff;
+}
+
 
 /*  Pop up rules  */
 
@@ -141,7 +269,7 @@ p {
 
 .modal {
   height: 375px;
-  width: 31%;
+  width: 33%;
   background-color: #f8a5c2;
   font-family: 'Fredoka One', cursive;
   font-size: 20px;
@@ -149,8 +277,8 @@ p {
   text-align: center;
   color: #dd6979;
   position: absolute;
-  top: -400px;
-  left: 35%;
+  top: -410px;
+  left: 33%;
   transition: 1s;
 }
 
@@ -174,6 +302,10 @@ p {
   width: 100%;
   border-radius: 0px 0px 20px 20px;
 }
+
+
+
+
 
 /*  Game HTML */
 .game_container{
@@ -225,4 +357,34 @@ p {
 .enemies
 {
   position: absolute;
+  transition: 0.05s linear all;
+}
+
+/* Game over */
+.game_over
+{
+  position: absolute;
+  width: 100%;
+  color: #ff3a5a;
+  font-size: 80px;
+  text-align: center;
+  font-family: 'Fredoka One', cursive;
+  z-index: 300000;
+  text-transform: uppercase;
+  text-shadow: -4px 0 #000000, 0 4px #000000,
+      4px 0 #000000, 0 -4px #000000;
+
+}
+#cursor
+{
+  pointer-events: none;
+  position: absolute;
+  /* transform: translate(-50%, -50%); */
+  width: 60px;
+  height: 60px;
+}
+
+.hidden
+{
+  display: none;
 }
