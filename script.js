@@ -46,21 +46,21 @@ const donnut = {
 }
 
 const muffinA = {
-  src:"images/muffinone.png",
+  src:"images/muffina.png",
   height : 60,
   width : 60,
   weight : 50,
 }
 
 const muffinB = {
-  src:"images/muffintwo.png",
+  src:"images/muffinb.png",
   height : 60,
   width : 60,
   weight : 50,
 }
 
 const muffinC = {
-  src:"images/muffinthree.png",
+  src:"images/muffinc.png",
   height : 80,
   width : 60,
   weight : 50,
@@ -236,9 +236,9 @@ function lv1()
 
   // setTimeout(function()
   // {
-  // //   clearInterval(lvlInterval)
-  // //   lv2()
-  // // },5000)
+  //   clearInterval(lvlInterval)
+  //   lv2()
+  // },5000)
 }
 
 
