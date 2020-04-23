@@ -236,9 +236,9 @@ function lv1()
 
   setTimeout(function()
   {
-    clearInterval(lvlInterval)
-    lv2()
-  },5000)
+    //clearInterval(lvlInterval)
+    //lv2()
+  //},5000)
 }
 
 
