@@ -1,81 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <title>Balloon Defender</title>
-    <link rel="stylesheet" href="style.css"/>
-    <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap" rel="stylesheet">
-  </head>
-  <body>
-    <audio src="./Sound.m4a"></audio>
-    <div class="container">
-      <div class="choco-title">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="./style.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap" rel="stylesheet">
+  <title>Bubble Defender</title>
+</head>
+<body class="body-fix">
+    <div class="game_container">
+      <div id="bubble">
         <img
-          class="chocolat"
-          src="https://cdn.glitch.com/38447b2d-276b-4628-8407-170cab592e71%2FChocolat.png?v=1587460487518"
-          alt="chocolate"
+          src="https://cdn.glitch.com/38447b2d-276b-4628-8407-170cab592e71%2FBubble.png?v=1587477235597"
+          alt="bubble"
         />
-        <h1 class="bubble">Bubble</h1>
-        <h1 class="defender">Defender</h1>
-        <a href="game.html" class="button">Play</a>
-        <div>
-          <button class="button" onclick="openModal()"> Rules </button>
-        </div>
-        <div class="modal">
-          <p>
-            Use the shield to protect the bubble from candy falling on it.
-          </p>
-          <p>
-            Click on the shield and hold down to move it.
-          </p>
-          <p>
-            To save your score, enter your nickname.
-          </p>
-          <button class="close" onclick="closeModal()">close</button>
-          <img class="popup" src="./cloud.png" alt="cloud">
-        </div>
-        <div>
-          <img
-            class="bonbon"
-            src="https://cdn.glitch.com/38447b2d-276b-4628-8407-170cab592e71%2FBonbon.png?v=1587461594106"
-            alt="bonbon"
-          />
-          <img
-            class="biscuit"
-            src="https://cdn.glitch.com/38447b2d-276b-4628-8407-170cab592e71%2Fbiscuit.png?v=1587460889443"
-            alt="biscuit"
-          />
-          <img
-            class="muffinA"
-            src="https://cdn.glitch.com/38447b2d-276b-4628-8407-170cab592e71%2FMuffinA.png?v=1587461623805"
-            alt="muffin"
-          />
-          <img
-            class="sucette"
-            src="https://cdn.glitch.com/38447b2d-276b-4628-8407-170cab592e71%2FSucette_1.png?v=1587461619170"
-            alt="sucette"
-          />
-          <img
-            class="donnut"
-            src="https://cdn.glitch.com/38447b2d-276b-4628-8407-170cab592e71%2FDonnut.png?v=1587461609251"
-            alt="donnut"
-          />
-          <img
-            class="cloud"
-            src="https://cdn.glitch.com/38447b2d-276b-4628-8407-170cab592e71%2Fcloud.png?v=1587476650951"
-            alt="cloud"
-          />
-          <div id="bubble">
-            <img
-              src="https://cdn.glitch.com/38447b2d-276b-4628-8407-170cab592e71%2FBubble.png?v=1587477235597"
-              alt="bubble"
-            />
-          </div>
-        </div>
-        </div>
       </div>
     </div>
-    <script src="script.js"></script>
-  </body>
+    <img
+      class="cloud_game"
+      src="https://cdn.glitch.com/38447b2d-276b-4628-8407-170cab592e71%2Fcloud.png?v=1587476650951"
+      alt="cloud"
+    />
+    <img id="cursor"
+    src="./images/unknown.png"
+    alt="cursor">
+
+    <!-- <p class="neuneu">II</p> -->
+    <nav>
+      <a href="index.html"><button class="return_to_menu">⌂</button></a>
+      <a href="#"><button class="pause_button">►</button></a>
+      <a href="#"><button class="control" onclick="play('audioPlayer', this)">♪</button></a>
+      <audio id="audioPlayer">
+      <source src="https://cdn.glitch.com/c43f1921-3985-437b-99dc-aa41345e643c%2Ffunny_song.mp3?v=1587569812799"></source>
+    </audio>
+    </nav>
+    <div class="game_over hidden">
+      <h5>GAME OVER</h5>
+    </div>
+  <script src="script.js"></script>
+</body>
 </html>
