@@ -1,7 +1,7 @@
   //NOM ENEMY
 const biscuit = {
   //ATRIBUTION DE LA SOURCE DE L'IMAGE
-  src:"./images/biscuit.png",
+  src:"images/biscuit.png",
   //ATTRIBUTION DE LA HAUTEUR
   height : 60,
   //ATTRIBUTION DE LA LARGEUR
@@ -11,76 +11,76 @@ const biscuit = {
 }
 
 const bonbonRond = {
-  src:"./images/bonbon_rond.png",
+  src:"images/bonbon_rond.png",
   height : 60,
   width : 60,
   weight : 90,
 }
 
 const bonbon = {
-  src:"./images/bonbon.png",
+  src:"images/bonbon.png",
   height : 60,
   width : 60,
   weight : 50,
 }
 
 const chocolat_1 = {
-  src:"./images/chocolat_1.png",
+  src:"images/chocolat_1.png",
   height : 60,
   width : 60,
   weight : 50,
 }
 
 const croissant = {
-  src:"./images/croissant.png",
+  src:"images/croissant.png",
   height : 60,
   width : 100,
   weight : 50,
 }
 
 const donnut = {
-  src:"./images/donnut.png",
+  src:"images/donnut.png",
   height : 60,
   width : 60,
   weight : 50,
 }
 
 const muffinA = {
-  src:"./images/muffinA.png",
+  src:"images/muffina.png",
   height : 60,
   width : 60,
   weight : 50,
 }
 
 const muffinB = {
-  src:"./images/muffinB.png",
+  src:"images/muffinb.png",
   height : 60,
   width : 60,
   weight : 50,
 }
 
 const muffinC = {
-  src:"./images/muffinC.png",
+  src:"images/muffinc.png",
   height : 80,
   width : 60,
   weight : 50,
 }
 const sucette = {
-  src:"./images/sucette.png",
+  src:"images/sucette.png",
   height : 100,
   width : 60,
   weight : 50,
 }
 
 const sucette_1 = {
-  src:"./images/sucette_1.png",
+  src:"images/sucette_1.png",
   height : 100,
   width : 60,
   weight : 50,
 }
 
 const tarte = {
-  src:"./images/tarte.png",
+  src:"images/tarte.png",
   height : 60,
   width : 60,
   weight : 50,
@@ -236,9 +236,9 @@ function lv1()
 
   setTimeout(function()
   {
-    //clearInterval(lvlInterval)
-    //lv2()
-  //},5000)
+    clearInterval(lvlInterval)
+    lv2()
+  },5000)
 }
 
 
@@ -335,4 +335,3 @@ function openModal() {
 function closeModal() {
   modal.style.top = "-410px"
 }
-
