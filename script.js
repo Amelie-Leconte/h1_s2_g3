@@ -46,21 +46,21 @@ const donnut = {
 }
 
 const muffinA = {
-  src:"images/muffina.png",
+  src:"images/muffinone.png",
   height : 60,
   width : 60,
   weight : 50,
 }
 
 const muffinB = {
-  src:"images/muffinb.png",
+  src:"images/muffintwo.png",
   height : 60,
   width : 60,
   weight : 50,
 }
 
 const muffinC = {
-  src:"images/muffinc.png",
+  src:"images/muffinthree.png",
   height : 80,
   width : 60,
   weight : 50,
@@ -234,11 +234,11 @@ function lv1()
     createEnemy()
   }, 1000)
 
-  setTimeout(function()
-  {
-    clearInterval(lvlInterval)
-    lv2()
-  },5000)
+  // setTimeout(function()
+  // {
+  // //   clearInterval(lvlInterval)
+  // //   lv2()
+  // // },5000)
 }
 
 
