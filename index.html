@@ -1,56 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="./style.css"/>
-    <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap" rel="stylesheet">
-    <title>Bubble Defender</title>
-  </head>
-  <body class="body-fix">
-      <div class="game_container">
-        <div id="bubble">
-          <img
-            src="https://cdn.glitch.com/38447b2d-276b-4628-8407-170cab592e71%2FBubble.png?v=1587477235597"
-            alt="bubble"
-          />
-        </div>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="./style.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap" rel="stylesheet">
+  <title>Bubble Defender</title>
+</head>
+<body class="body-fix">
+    <div class="game_container">
+      <div id="bubble">
+        <img
+          src="https://cdn.glitch.com/38447b2d-276b-4628-8407-170cab592e71%2FBubble.png?v=1587477235597"
+          alt="bubble"
+        />
       </div>
-      <img
-        class="cloud_game"
-        src="https://cdn.glitch.com/38447b2d-276b-4628-8407-170cab592e71%2Fcloud.png?v=1587476650951"
-        alt="cloud"
-      />
-      <img id="cursor"
-      src="./images/unknown.png"
-      alt="cursor">
-    
-        <div id="Clouds">
-      <div class="Cloud Foreground"></div>
-      <div class="Cloud Background"></div>
-      <div class="Cloud Foreground"></div>
-      <div class="Cloud Background"></div>
-      <div class="Cloud Foreground"></div>
-      <div class="Cloud Background"></div>
-      <div class="Cloud Background"></div>
-      <div class="Cloud Foreground"></div>
-      <div class="Cloud Background"></div>
-      <div class="Cloud Background"></div>
     </div>
+    <img
+      class="cloud_game"
+      src="https://cdn.glitch.com/38447b2d-276b-4628-8407-170cab592e71%2Fcloud.png?v=1587476650951"
+      alt="cloud"
+    />
+    <img id="cursor"
+    src="./images/cursor.png"
+    alt="cursor">
 
-      <!-- <p class="neuneu">II</p> -->
-      <nav>
-        <a href="index.html"><button class="return_to_menu">⌂</button></a>
-        <a href="#"><button class="pause_button">►</button></a>
-        <a href="#"><button class="control" onclick="play('audioPlayer', this)">♪</button></a>
-        <audio id="audioPlayer">
-        <source src="https://cdn.glitch.com/c43f1921-3985-437b-99dc-aa41345e643c%2Ffunny_song.mp3?v=1587569812799"></source>
-      </audio>
-      </nav>
-      <div class="game_over hidden">
-        <h5>GAME OVER</h5>
-      </div>
-    <script src="script.js"></script>
-  </body>
+    <!-- <p class="neuneu">II</p> -->
+    <nav>
+      <a href="index.html"><button class="return_to_menu">⌂</button></a>
+      <a href="#"><button class="pause_button">►</button></a>
+      <a href="#"><button class="control" onclick="play('audioPlayer', this)">♪</button></a>
+      <audio id="audioPlayer">
+      <source src="https://cdn.glitch.com/c43f1921-3985-437b-99dc-aa41345e643c%2Ffunny_song.mp3?v=1587569812799"></source>
+    </audio>
+    </nav>
+    <div class="game_over hidden">
+      <h5>GAME OVER</h5>
+    </div>
+  <script src="script.js"></script>
+</body>
 </html>
