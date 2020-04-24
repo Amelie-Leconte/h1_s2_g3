@@ -1,4 +1,4 @@
-  //NOM ENEMY
+  //NOM ENNEMI
 const biscuit = {
   //ATRIBUTION DE LA SOURCE DE L'IMAGE
   src:"images/biscuit.png",
@@ -105,7 +105,7 @@ let cursor = document.querySelector("#cursor")
 let enemyChoice
 const gameOverText = document.querySelector(".game_over")
 
- //OBJECT CREATION-ENEMIES
+ //OBJECT CREATION-ENNEMIS
 
 
 
@@ -118,36 +118,36 @@ function bubbleGum()
 bubbleGum()
 
 
-//PARAMETRE Colision
-//ON REGARDE SI L4UN DES ELEMENT TOUCHE LE REBORD DE LA BULLE
+//PARAMETRE Collision
+//ON REGARDE SI L'UN DES ELEMENTS TOUCHE LE REBORD DE LA BULLE
 function bubbleColision (element)
 {
   if (element[4] + element[0].width >= bubblePosition.left + 15 && element[4] <= bubblePosition.left - 15 + (bubblePosition.right - bubblePosition.left) && element[3] + element[0].height >= bubblePosition.top + 15 && element[3] <= bubblePosition.bottom - 15)
   {//SI CA TOUCHE + FIN DE PARTIE
     gameOver()
-  }//Calcule de position droite> a la gauche de la bulle, position de gauche vers la droite
+  }//Calcul de position droite> a la gauche de la bulle, position de gauche vers la droite
 }
 
 
 
-//CREATION D'UN ENEMIE POSITION, DIRECTION, IMAGE
+//CREATION D'UN ENNEMI POSITION, DIRECTION, IMAGE
 function createEnemy()
 {
-  //On choisi un ennemie aléatoirement
+  //On choisi un ennemi aléatoirement
   enemiesChoice()
-  //CREATION D4UNE DIV ET APPLICATION DE STYLE HAUTEUR:LARGEUR PUIS D4UN CLASS
+  //CREATION D'UNE DIV ET APPLICATION DE STYLE HAUTEUR:LARGEUR PUIS D'UN CLASS
   enemy = document.createElement("div")
   enemy.style.height = `${enemyChoice.height}px`
   enemy.style.width = `${enemyChoice.width}px`
   enemy.setAttribute("class","enemies")
-  //CREATION VISUEL ENEMIES ET SOURCE DE L'IMAGE
+  //CREATION VISUELLE ENNEMIS ET SOURCE DE L'IMAGE
   imageEnemy = new Image()
   imageEnemy.src = enemyChoice.src
-  //ALEATOIRE DE DEPART POUR LA POSITION HORIZONTALE DE L'ENNEMIE
+  //ALEATOIRE DE DEPART POUR LA POSITION HORIZONTALE DE L'ENNEMI
   let posright = Math.floor(Math.random()*(window.innerWidth-enemyChoice.width))
-  // CREATION DE 20 INTERVALE SUR LA LARGEUR DE LA FENETRE
+  // CREATION DE 20 INTERVALES SUR LA LARGEUR DE LA FENETRE
   let createInterval = window.innerWidth/3
-  //Pour ses 20 section on regarde dans quel interval on place l'ennemie, en fonction de l'interval on lui donne une direction pour qu'il aille vers la bulle
+  //Pour ces 20 sections on regarde dans quel intervalle on place l'ennemi, en fonction de l'intervalle on lui donne une direction pour qu'il aille vers la bulle
   for (let i = 0 ;i <= 20; i++)
   {
     if(posright >= createInterval * i && posright < createInterval * (i + 1))
@@ -160,11 +160,11 @@ function createEnemy()
   //Objet, div, direction, position (Y & X)
   let newEnemy = [enemyChoice, enemy, direction, -200, posright]
   enemy.style.top = "-200px"
-  //APLLICATION AU DOM DE LA DIV PUIS DE LIMAGE
+  //APPLICATION AU DOM DE LA DIV PUIS DE LIMAGE
   container.appendChild(enemy)
   enemy.appendChild(imageEnemy)
 
-  //SAUVEGARDE DE L'ENNEMIE DANS UN TABLEAU
+  //SAUVEGARDE DE L'ENNEMI DANS UN TABLEAU
   enemiesOnScreen.push(newEnemy)
 }
 
@@ -178,31 +178,31 @@ function enemiesChoice()
 
  //GRAVITY
 function gravity()
-{//CREATION D'UNE RECURENCE POUR LE DEPLACEMENT DES OBJETS
+{//CREATION D'UNE RECURRENCE POUR LE DEPLACEMENT DES OBJETS
   interval = setInterval(function()
-  {//ON PARCOURT LE TABLEAU DES ENNEMIES A LECRAN POUR LEURS APPLIQUER UN MOUVEMENT
+  {//ON PARCOURT LE TABLEAU DES ENNEMIS A L'ECRAN POUR LEUR APPLIQUER UN MOUVEMENT
     enemiesOnScreen.forEach((element, index) =>
       {//ON APPLIQUE UN MOUVEMENT VERS LE BAS EN FONCTION DU POIDS
         element[3] += element[0].weight
         element[1].style.top = `${element[3]}px`
-        //APPLIQUE UN MOUVEMENT VERS LA GAUCHE OU VERS LA DROITE EN FONCTION DE LA DIRECTION ENREGISTRE
+        //APPLIQUE UN MOUVEMENT VERS LA GAUCHE OU VERS LA DROITE EN FONCTION DE LA DIRECTION ENREGISTREE
         element[4] = element[4] + element[2]
         element[1].style.left = `${element[4]}px`
         if (element[0].weight <= 3)
         {
           refall(element)
         }
-        //APPLIQUE LE POTENCIEL ROBOND A LECRAN
+        //APPLIQUE LE POTENTIEL REBOND A L'ECRAN
         rebond(element)
-        //VERIFICATION QU'UN ELEMENT NE PETE LA BULLE
+        //VERIFICATION QU'UN ELEMENT N'ECLATE PAS LA BULLE
         cursorColision(element)
         bubbleColision(element)
-        //SI UN ELEMENT NEST PLUS A LECRAN IL EST SUPPRIME
+        //SI UN ELEMENT N'EST PLUS A L'ECRAN IL EST SUPPRIME
         if(element[3]>window.innerHeight)
         {
-          //SUPPRESSION DE LECRAN
+          //SUPPRESSION DE L'ECRAN
           element[1].parentNode.removeChild(element[1])
-          //SUPRESSION DES ENNEMIES DANS LE TABLEAU
+          //SUPRESSION DES ENNEMIS DANS LE TABLEAU
           enemiesOnScreen.splice(index,1)
         }
     });
@@ -214,7 +214,7 @@ function refall(element)
 }
 
 
-//FONCTION POUR LES REBOND A GAUCHE ET A DROITE
+//FONCTION POUR LES REBONDS A GAUCHE ET A DROITE
 function rebond(element)
 {//VERIFICATION QU'UN DES ELEMENTS VA TOUCHER UN DES REBORDS
   if(element[4] <= 0 || element[4] + element[0].width >= window.innerWidth)
@@ -246,7 +246,7 @@ function lv1()
 function cursorF()
 {
   window.addEventListener("mousemove", (e)=>
-  {//LIESON ET POSITIONNEMENT DU CURSEUR
+  {//LIAISON ET POSITIONNEMENT DU CURSEUR
     let xPos = e.pageX
     let yPos = e.pageY
     cursor.style.top = `${yPos}px`
@@ -265,7 +265,7 @@ function init()
 init()
 
 
-//Paramètre colision avec le curseur
+//Paramètres colision avec le curseur
 
 
 function cursorColision (element)
@@ -291,11 +291,11 @@ function cursorColision (element)
 
   //SI CA TOUCHE + FIN DE PARTIE
 
-  //Calcule de position droite> a la gauche de la bulle, position de gauche vers la droite
+  //Calcul de position droite> a la gauche de la bulle, position de gauche vers la droite
 
 //FONCTION DE FIN DE PARTIE
 function gameOver()
-{//ON ENLEVE L'INTERVAL NECESSAIRE AU DEPLACEMENT DES ELEMENTS
+{//ON ENLEVE L'INTERVALLE NECESSAIRE AU DEPLACEMENT DES ELEMENTS
   clearInterval(interval)
   clearInterval(lvlInterval)
   gameOverText.classList.remove("hidden")
